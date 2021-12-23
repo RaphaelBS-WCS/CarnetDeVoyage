@@ -11,7 +11,7 @@ public class Journey {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String Country;
+    private String country;
     private Date jStart;
     private Date jEnd;
 
@@ -27,11 +27,11 @@ public class Journey {
     }
 
     public String getCountry() {
-        return Country;
+        return country;
     }
 
     public void setCountry(String country) {
-        Country = country;
+        this.country = country;
     }
 
     public Date getjStart() {
