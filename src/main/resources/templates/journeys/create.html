@@ -17,7 +17,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/journeys">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="journeys/create">Ajouter un voyage</a>
@@ -27,7 +27,7 @@
 </nav>
 <section id="content">
     <h1>Ajouter un Voyage</h1>
-    <form th:action="@{'/users'}" method="POST">
+    <form th:action="@{'/journeys/create'}" method="POST">
         <th:block th:each="field : ${elementFields}">
             <label th:for="${field}" th:text="${#strings.capitalize(field)}"></label>
             <input th:id="${field}" th:name="${field}" th:placeholder="${field}">
