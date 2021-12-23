@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Controller;
 
 import com.wildcodeschool.carnetdevoyage.repository.JourneyRepository;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -36,4 +38,5 @@ public class JourneyController extends AbstractCrudIntegerController{
     protected Class getElementClass() {
         return Journey.class;
     }
+
 }

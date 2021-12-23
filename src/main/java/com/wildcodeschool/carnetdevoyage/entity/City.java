@@ -1,7 +1,9 @@
 package com.wildcodeschool.carnetdevoyage.entity;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -12,7 +14,9 @@ public class City {
     private Integer id;
 
     private String name;
-    private Date stopDate;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private LocalDate stopDate;
     private String summary;
 
     @OneToMany(mappedBy = "city",cascade = CascadeType.ALL)
@@ -37,11 +41,11 @@ public class City {
         this.name = name;
     }
 
-    public Date getStopDate() {
+    public LocalDate getStopDate() {
         return stopDate;
     }
 
-    public void setStopDate(Date stopDate) {
+    public void setStopDate(LocalDate stopDate) {
         this.stopDate = stopDate;
     }
 
