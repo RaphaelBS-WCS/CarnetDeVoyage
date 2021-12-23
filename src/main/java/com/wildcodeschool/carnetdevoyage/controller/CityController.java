@@ -33,4 +33,6 @@ public class CityController extends AbstractCrudIntegerController{
     protected Class getElementClass() {
         return City.class;
     }
+
+    @RequestMapping("{journey.id}/getAllByJouney")
 }
